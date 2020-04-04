@@ -578,7 +578,7 @@ btn.addEventListener('mouseout', (e) => {
 });
 ```
 
-### Functional Example: Grabbing elements from a form
+## Functional Example: Grabbing elements from a form
 
 > Append child appends something to that div
 
