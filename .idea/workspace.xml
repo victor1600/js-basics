@@ -4,6 +4,8 @@
     <list default="true" id="838de1fc-05ad-4939-a075-db8b15d7ab15" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,21 +46,45 @@
       <updated>1585942964738</updated>
       <workItem from="1585942967217" duration="652000" />
       <workItem from="1585944333446" duration="1127000" />
-      <workItem from="1585949622762" duration="11588000" />
+      <workItem from="1585949622762" duration="15641000" />
     </task>
+    <task id="LOCAL-00001" summary="test">
+      <created>1585969784367</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585969784367</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="WindowStateProjectService">
     <state x="917" y="220" width="800" height="677" key="#Inspections" timestamp="1585968990378">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="917" y="220" width="800" height="677" key="#Inspections/67.27.1853.1053@67.27.1853.1053" timestamp="1585968990378" />
+    <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585969887229">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1585969887229" />
+    <state x="1046" y="40" width="864" height="979" key="CommitChangelistDialog2" timestamp="1585969784156">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="1046" y="40" width="864" height="979" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1585969784156" />
     <state x="898" y="188" key="SettingsEditor" timestamp="1585955014572">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="898" y="188" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1585955014572" />
+    <state x="1110" y="262" width="800" height="536" key="Vcs.Push.Dialog.v2" timestamp="1585969786761">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="1110" y="262" width="800" height="536" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1585969786761" />
   </component>
 </project>

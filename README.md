@@ -421,3 +421,192 @@ const person1 = new Person('John', 'Doe', '4-3-1980');
 console.log(person1.getBirthYear());
 console.log(person1);
 ```
+
+# Dom
+
+### Selecting elements
+
+#### Single element
+
+- querySelector
+We can select  pretty much everything, html tags, classes, ids, 
+```javascript
+// const form = document.getElementById('my-form');
+// console.log(form)
+
+const form = document.querySelector('.container');
+console.log(form)
+// Grabs the first h1 it finds.
+const form2 = document.querySelector('h1');
+console.log(form2)
+```
+#### Multiple elements
+Gives us a Nodelist, something similar to an array. We can run array methods on it,
+like for each.
+
+```javascript
+const form = document.querySelectorAll('h1');
+console.log(form)
+
+const items = document.querySelectorAll('h1');
+
+items.forEach((item) => console.log(item));
+```
+
+### Modify elements
+
+- Remove
+```javascript
+const ul = document.querySelector('.items');
+// Remove elements
+ul.lastElementChild.remove();
+```
+
+- Modify text
+```javascript
+const ul = document.querySelector('.items');
+ul.firstElementChild.textContent = 'Hello';
+ul.children[1].innerHTML = 'Brad';
+```
+
+- Modify HTML
+```javascript
+const ul = document.querySelector('.items');
+
+ul.lastElementChild.innerHTML = '<h1>Hello</h1>'
+
+
+
+const btn = document.querySelector('.btn')
+btn.style.background = 'red';
+```
+
+## Events
+Arguments:
+- Event
+- Function we want to run when that functions happens
+
+- Example 1:
+```javascript
+const btn = document.querySelector('.btn')
+// e is the event parameter
+btn.addEventListener('click', (e) => {
+    // preventDefault, to avoid flashing quickly
+    e.preventDefault();
+    console.log('click');
+});
+```
+
+e holds the event, e.target holds the name of the element that triggered it 
+
+- Example 2, seeing the e event:
+```javascript
+const btn = document.querySelector('.btn')
+// e is the event parameter
+btn.addEventListener('click', (e) => {
+    // preventDefault, to avoid flashing quickly
+    e.preventDefault();
+    console.log(e.target.id);
+});
+```
+
+- Example 3 (Changing background)
+```javascript
+const btn = document.querySelector('.btn')
+// e is the event parameter
+btn.addEventListener('click', (e) => {
+    // preventDefault, to avoid flashing quickly
+    e.preventDefault();
+    document.querySelector('#my-form')
+        .style.background = '#ccc';
+});
+```
+
+- Example 4 (Adding a css class)
+
+```javascript
+const btn = document.querySelector('.btn')
+// e is the event parameter
+btn.addEventListener('click', (e) => {
+    // preventDefault, to avoid flashing quickly
+    e.preventDefault();
+    document.querySelector('#my-form')
+        .style.background = '#ccc';
+    document.querySelector('body').classList.add('bg-dark');
+});
+```
+
+- Example 5: Changing text
+```javascript
+const btn = document.querySelector('.btn')
+// e is the event parameter
+btn.addEventListener('click', (e) => {
+    // preventDefault, to avoid flashing quickly
+    e.preventDefault();
+    document.querySelector('#my-form')
+        .style.background = '#ccc';
+    document.querySelector('body').classList.add('bg-dark');
+    document.querySelector('.items')
+        .lastElementChild.innerHTML = '<h1>Hello</h1>';
+});
+```
+
+- Example 6: Mouse events
+
+```javascript
+const btn = document.querySelector('.btn')
+//PUT MOUSE OVER IT
+btn.addEventListener('mouseover', (e) => {
+    // preventDefault, to avoid flashing quickly
+    e.preventDefault();
+    document.querySelector('#my-form')
+        .style.background = '#ccc';
+    document.querySelector('body').classList.add('bg-dark');
+    document.querySelector('.items')
+        .lastElementChild.innerHTML = '<h1>Hello</h1>';
+});
+
+// RELEASEING MOUSE
+btn.addEventListener('mouseout', (e) => {
+    // preventDefault, to avoid flashing quickly
+    e.preventDefault();
+    document.querySelector('#my-form')
+        .style.background = '#ccc';
+    document.querySelector('body').classList.add('bg-dark');
+    document.querySelector('.items')
+        .lastElementChild.innerHTML = '<h1>Hello</h1>';
+});
+```
+
+### Functional Example: Grabbing elements from a form
+
+> Append child appends something to that div
+
+```javascript
+const myForm = document.querySelector('#my-form');
+const nameInput = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
+const msg = document.querySelector('.msg');
+const userList = document.querySelector('#users');
+
+myForm.addEventListener('submit', onSubmit);
+
+function onSubmit(e) {
+    e.preventDefault();
+    //GETTING VALUE FROM INPUT FIELD
+    if (nameInput.value === '' || emailInput.value === '') {
+        msg.classList.add('error')
+        msg.innerHTML = 'Please enter all fields';
+        // Disappear after timeout.
+        setTimeout(() => msg.remove(), 300);
+    } else {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(`${nameInput.value}: ${emailInput.value}`));
+        userList.appendChild(li);
+
+        // Clear Fields
+        nameInput.value = '';
+        emailInput.value = '';
+    }
+}
+```
