@@ -611,6 +611,7 @@ function onSubmit(e) {
 }
 ```
 ### Callbacks
+```javascript
 function doHomework(subject, callback) {
   alert(`Starting my ${subject} homework.`);
   callback();
@@ -619,5 +620,6 @@ function alertFinished(){
   alert('Finished my homework');
 }
 doHomework('math', alertFinished);
+```
 
 [Explanation of callbacks](https://codeburst.io/javascript-what-the-heck-is-a-callback-aba4da2deced)
